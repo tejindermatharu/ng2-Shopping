@@ -13,6 +13,8 @@ var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Angular';
     }
+    AppComponent.prototype.productAdded = function (event) {
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',

@@ -12,13 +12,19 @@ var core_1 = require('@angular/core');
 var product_1 = require('../Models/product');
 var InputComponent = (function () {
     function InputComponent() {
+        this.added = new core_1.EventEmitter();
         this.name = 'Inputs';
         this.product = new product_1.Product();
         this.product.date = new Date();
     }
     InputComponent.prototype.add = function () {
         var product = this.product;
+        this.added.emit(product);
     };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], InputComponent.prototype, "added", void 0);
     InputComponent = __decorate([
         core_1.Component({
             selector: 'admin-input',

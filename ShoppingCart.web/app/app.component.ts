@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product }  from './Models/product';
 
 @Component({
   selector: 'my-app',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
     name = 'Angular';
+
+    productAdded(event: Product) : void {
+
+    }
 }

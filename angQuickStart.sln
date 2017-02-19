@@ -25,13 +25,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angQuickStart", "..\..\..\.
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.web", "ShoppingCart.web\ShoppingCart.web.csproj", "{67FA859E-FB9E-4E4E-BD36-7E51053D3A4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{16C60AEB-F717-4F4A-8665-C9B9246078EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{16C60AEB-F717-4F4A-8665-C9B9246078EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C60AEB-F717-4F4A-8665-C9B9246078EE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C60AEB-F717-4F4A-8665-C9B9246078EE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{67FA859E-FB9E-4E4E-BD36-7E51053D3A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FA859E-FB9E-4E4E-BD36-7E51053D3A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FA859E-FB9E-4E4E-BD36-7E51053D3A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FA859E-FB9E-4E4E-BD36-7E51053D3A4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

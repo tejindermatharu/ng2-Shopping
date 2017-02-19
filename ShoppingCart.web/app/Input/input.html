@@ -1,0 +1,23 @@
+﻿
+<form name="#adminForm" class="form-horizontal" novalidate style="padding:30px;">
+    <div class="form-group">
+        <label for="txtName">Name</label>
+        <input type="text" name= "name" class="form-control input-sm thinTextBox" id="txtName" required [(ngModel)]="product.name">
+    </div>
+    <div class="form-group">
+        <label for="txtDescription">Description</label>
+        <input type="text" name= "desc" class="form-control input-sm thinTextBox" id="txtDescription" required [(ngModel)]="product.desc">
+    </div>
+    <div class="form-group">
+        <label for="txtPrice">Price</label>
+        <input type="text" name="price" class="form-control input-sm thinTextBox" id="txtPrice" required ng-minlength="1" [(ngModel)]="product.price" />
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default" (click)="add()">Add</button>
+    </div>
+    <div id="additionalContent">
+    </div>
+</form>
+
+<!--<pre>myForm.myName.$error = {{ adminForm.price.$error | json }}</pre>-->

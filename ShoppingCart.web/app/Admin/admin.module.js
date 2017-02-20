@@ -9,20 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular2';
+var admin_main_component_1 = require('./Main/admin.main.component');
+var input_component_1 = require('./Input/input.component');
+var forms_1 = require('@angular/forms');
+var AdminModule = (function () {
+    function AdminModule() {
     }
-    AppComponent.prototype.productAdded = function (event) {
-    };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.html',
+    AdminModule = __decorate([
+        core_1.NgModule({
+            imports: [forms_1.FormsModule],
+            declarations: [admin_main_component_1.AdminMainComponent,
+                input_component_1.InputComponent],
+            providers: [],
+            exports: [admin_main_component_1.AdminMainComponent, input_component_1.InputComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AdminModule);
+    return AdminModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AdminModule = AdminModule;
+//# sourceMappingURL=admin.module.js.map

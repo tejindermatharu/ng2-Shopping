@@ -6,7 +6,7 @@ import { Product }  from './Models/product';
   templateUrl: 'app/app.html',
 })
 export class AppComponent  {
-    name = 'Angular';
+    name = 'Angular2';
 
     productAdded(event: Product) : void {
 

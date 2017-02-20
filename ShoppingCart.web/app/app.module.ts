@@ -1,13 +1,19 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule} from '@angular/forms';
+
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent }  from './app.component';
-import { InputComponent }  from './Input/input.component';
-//import { Product }  from './Models/product';
+import { AppRoutingModule }  from './app.routing.module';
+
+import { NavComponent }  from './Nav/nav.component';
+import { AdminModule }  from './Admin/admin.module';
+
 
 @NgModule({
-  imports: [BrowserModule, FormsModule ],
-  declarations: [AppComponent, InputComponent],
+
+  imports: [BrowserModule, AppRoutingModule, AdminModule ],
+  declarations: [AppComponent,
+                 NavComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

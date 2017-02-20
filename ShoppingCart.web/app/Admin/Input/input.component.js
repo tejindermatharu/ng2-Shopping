@@ -9,11 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var product_1 = require('../Models/product');
+var product_1 = require('../../Models/product');
 var InputComponent = (function () {
     function InputComponent() {
         this.added = new core_1.EventEmitter();
-        this.name = 'Inputs';
+        this.name = 'Input';
         this.product = new product_1.Product();
         this.product.date = new Date();
     }
@@ -28,7 +28,7 @@ var InputComponent = (function () {
     InputComponent = __decorate([
         core_1.Component({
             selector: 'admin-input',
-            templateUrl: 'app/Input/input.html'
+            templateUrl: 'app/Admin/Input/input.html'
         }), 
         __metadata('design:paramtypes', [])
     ], InputComponent);

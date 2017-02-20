@@ -9,9 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var admin_main_component_1 = require('./Main/admin.main.component');
 var input_component_1 = require('./Input/input.component');
-var forms_1 = require('@angular/forms');
+var product_data_service_1 = require('./Repository/product.data.service');
 var AdminModule = (function () {
     function AdminModule() {
     }
@@ -20,7 +21,7 @@ var AdminModule = (function () {
             imports: [forms_1.FormsModule],
             declarations: [admin_main_component_1.AdminMainComponent,
                 input_component_1.InputComponent],
-            providers: [],
+            providers: [product_data_service_1.ProductDataService],
             exports: [admin_main_component_1.AdminMainComponent, input_component_1.InputComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -12,8 +12,7 @@ var core_1 = require('@angular/core');
 var NavComponent = (function () {
     function NavComponent() {
     }
-    NavComponent.prototype.ngOnInit = function () {
-    };
+    NavComponent.prototype.ngOnInit = function () { };
     NavComponent = __decorate([
         core_1.Component({
             selector: 'nav-component',

@@ -1,0 +1,12 @@
+﻿{
+  // to enable automatic processing of this file add "postinstall": "typings install" to package.json scripts { } at which point the tsconfig.json
+  // entries "typings/main", "typings/main.d.ts" become relevant.  that said you really only need typings package services for scenarios where npm
+  // package node_modules folder doesn't include *.d.ts files that can be directly enabled using main.ts /// <reference /> entries.
+  "name": "angular2-quickstart",
+  "dependencies": { },
+  "devDependencies": { },
+  "ambientDependencies": {
+    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#4de74cb527395c13ba20b438c3a7a419ad931f1c",
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#bc92442c075929849ec41d28ab618892ba493504"
+  }
+}

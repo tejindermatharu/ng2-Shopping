@@ -7,7 +7,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lint": "tslint ./app/**/*.ts -t verbose",
-    "lite": "lite-server"
+    "typings": "typings",
+    "postinstall": "typings install"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +25,7 @@
     "angular-in-memory-web-api": "~0.2.4",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
-    "rxjs": "5.0.1",
+    "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.40",
     "zone.js": "^0.7.4"
   },
@@ -44,7 +45,9 @@
     "protractor": "~4.0.14",
     "rimraf": "^2.5.4",
     "@types/node": "^6.0.46",
-    "@types/jasmine": "2.5.36"
+    "@types/jasmine": "2.5.36",
+    "@types/es6-shim": "^0.31.32",
+    "typings": "^0.6.8"
   },
   "repository": {}
 }

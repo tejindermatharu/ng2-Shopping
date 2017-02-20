@@ -17,7 +17,7 @@ export class InputComponent {
         this.product.date = new Date();
     }
 
-    add(): void {
+    public add(): void {
 
         var product = this.product;
 

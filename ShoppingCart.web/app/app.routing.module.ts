@@ -1,11 +1,13 @@
 ﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminMainComponent }  from './Admin/Main/admin.main.component';
-
+import { ShopMainComponent } from './Shop/Main/shop.main.component'
 
 const routes: Routes = [
     { path: 'admin', component: AdminMainComponent },
-    { path: '**', redirectTo: 'admin' }
+    { path: 'shop', component: ShopMainComponent },
+    { path: '', redirectTo: 'admin' , pathMatch: 'full'},
+    { path: '**', redirectTo: 'admin' ,pathMatch: 'full'}
 ];
 
 @NgModule({

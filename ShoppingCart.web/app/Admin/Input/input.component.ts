@@ -6,6 +6,7 @@ import { Product }  from '../../Models/product';
     templateUrl: 'app/Admin/Input/input.html'
 })
 export class InputComponent {
+
     @Output() added = new EventEmitter<Product>();
 
     name = 'Input';
@@ -13,15 +14,23 @@ export class InputComponent {
     product: Product;
 
     constructor() {
-        this.product = new Product();
-        this.product.date = new Date();
+        this.createNewProduct();
     }
 
     public add(): void {
 
-        var product = this.product;
+        var product = Object.assign(this.product);
+
+        //Reset product object
+        this.createNewProduct();
 
         this.added.emit(product);
+    }
+
+    private createNewProduct(): void {
+
+        this.product = new Product();
+        this.product.date = new Date();
     }
 
 }

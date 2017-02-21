@@ -1,0 +1,52 @@
+﻿
+<table class="table table-condensed table-striped table-hover table-bordered custom-table-style">
+    <tr class="panel-title">
+        <th></th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let item of products;" (dblclick)="toggleEditMode(item)">
+        <td>
+
+            <div class="btn-toolbar" [hidden]="item.editMode">
+                <div class="btn-group">
+                    <i class="btn glyphicon glyphicon-edit" (click)="toggleEditMode(item)" title="Edit"></i>
+                    <i class="btn glyphicon glyphicon-trash" (click)="deleteProduct(item)" title="Delete" data-toggle="modal"></i>
+                </div>
+            </div> 
+
+            <div class="btn-toolbar" [hidden]="!item.editMode">
+                <div class="btn-group">
+                    <i class="btn glyphicon glyphicon-floppy-disk" (click)="update(item)" title="Save" ng-disabled="editForm.$invalid"></i>
+                    <i class="btn glyphicon glyphicon-remove" (click)="toggleEditMode(item)" title="Cancel"></i>
+                </div>
+            </div>
+        </td>
+        <td style="vertical-align: middle">
+
+            <span class="full-width-inline">{{item.name}}</span>
+        </td>
+
+        <td style="vertical-align: middle">
+
+            <span class="full-width-inline" [hidden]="!item.editMode">
+                {{item.desc}}
+            </span>
+
+            <form name="editForm" [hidden]="item.editMode">
+                <input name="description" [(ngModel)]="item.desc"  required ng-keydown="vm.updateOnEnter(item, $event)" class="form-control" />
+            </form>
+        </td>
+        <td style="vertical-align: middle">
+
+            <span class="full-width-inline" [hidden]="!item.editMode">
+                {{item.price}}
+            </span>
+
+            <form name="editForm" [hidden]="item.editMode">
+                <input ng-model="item.price"  required ng-keydown="vm.updateOnEnter(item, $event)" class="form-control" />
+            </form>
+        </td>
+    </tr>
+</table>

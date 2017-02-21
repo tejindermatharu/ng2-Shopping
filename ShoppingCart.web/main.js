@@ -1,3 +1,4 @@
+/// <reference path="node_modules/@types/es6-shim/index.d.ts" />
 "use strict";
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var app_module_1 = require('./app/app.module');

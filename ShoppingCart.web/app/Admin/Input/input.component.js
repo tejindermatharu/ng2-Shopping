@@ -8,31 +8,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var product_1 = require('../../Models/product');
+var core_1 = require("@angular/core");
+var product_1 = require("../../Models/product");
 var InputComponent = (function () {
     function InputComponent() {
         this.added = new core_1.EventEmitter();
         this.name = 'Input';
-        this.product = new product_1.Product();
-        this.product.date = new Date();
+        this.createNewProduct();
     }
     InputComponent.prototype.add = function () {
-        var product = this.product;
+        var product = Object.assign(this.product);
+        //Reset product object
+        this.createNewProduct();
         this.added.emit(product);
     };
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], InputComponent.prototype, "added", void 0);
-    InputComponent = __decorate([
-        core_1.Component({
-            selector: 'admin-input',
-            templateUrl: 'app/Admin/Input/input.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], InputComponent);
+    InputComponent.prototype.createNewProduct = function () {
+        this.product = new product_1.Product();
+        this.product.date = new Date();
+    };
     return InputComponent;
 }());
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], InputComponent.prototype, "added", void 0);
+InputComponent = __decorate([
+    core_1.Component({
+        selector: 'admin-input',
+        templateUrl: 'app/Admin/Input/input.html'
+    }),
+    __metadata("design:paramtypes", [])
+], InputComponent);
 exports.InputComponent = InputComponent;
 //# sourceMappingURL=input.component.js.map

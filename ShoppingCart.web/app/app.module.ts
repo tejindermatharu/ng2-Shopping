@@ -7,13 +7,14 @@ import { AppComponent }  from './app.component';
 import { AppRoutingModule }  from './app.routing.module';
 import { NavComponent }  from './Nav/nav.component';
 import { AdminModule }  from './Admin/admin.module';
-
+import { ShopMainComponent } from './Shop/Main/shop.main.component'
 
 @NgModule({
 
   imports: [BrowserModule, AppRoutingModule, AdminModule, HttpModule ],
   declarations: [AppComponent,
-                 NavComponent],
+                 NavComponent,
+                 ShopMainComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

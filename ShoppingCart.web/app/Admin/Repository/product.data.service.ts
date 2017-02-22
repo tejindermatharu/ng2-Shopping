@@ -10,11 +10,13 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 
 import { IProduct }  from '../../Models/product';
+import { AdminConstants }  from '../admin.constants';
+
 
 @Injectable()
-export class ProductDataService {
+export class ProductDataService implements IProductDataService {
 
-    private baseUrl: string = '/api/product/';
+    private baseUrl: string = AdminConstants.baseUrl;
 
     constructor(private http: Http) {
     }
@@ -49,8 +51,6 @@ export class ProductDataService {
     }
 
     private handleError(error: Response) {
-        // in a real world app, we may send the server to some remote logging infrastructure
-        // instead of just logging it to the console
         console.error('An error occurred',error);
         return Observable.throw(error.json().error || 'Server error');
     }
@@ -64,4 +64,10 @@ export class ProductDataService {
         return new Headers({ 'Content-Type': 'application/json' });
     }
 
+}
+
+export interface IProductDataService {
+        save: (product: IProduct) => Observable<any>;
+        getAllProducts: () => Observable<IProduct[]>;
+        getAllProductsPromise: () => Promise<any>;
 }

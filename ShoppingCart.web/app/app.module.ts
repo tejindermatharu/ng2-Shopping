@@ -5,9 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent }  from './app.component';
 import { AppRoutingModule }  from './app.routing.module';
+
 import { NavComponent }  from './Nav/nav.component';
-import { AdminModule }  from './Admin/admin.module';
 import { ShopMainComponent } from './Shop/Main/shop.main.component'
+import { AdminModule }  from './Admin/admin.module';
+
 
 @NgModule({
 

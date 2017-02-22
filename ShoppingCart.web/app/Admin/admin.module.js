@@ -23,8 +23,7 @@ AdminModule = __decorate([
         declarations: [admin_main_component_1.AdminMainComponent,
             input_component_1.InputComponent,
             admin_edit_component_1.AdminEditComponent],
-        providers: [product_data_service_1.ProductDataService],
-        exports: [admin_main_component_1.AdminMainComponent, input_component_1.InputComponent]
+        providers: [product_data_service_1.ProductDataService]
     })
 ], AdminModule);
 exports.AdminModule = AdminModule;

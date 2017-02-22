@@ -20,12 +20,13 @@ var AdminMainComponent = (function () {
         this.productService.getAllProducts()
             .subscribe(function (data) { return _this.productsList = Object.assign(data); });
         //using a promise
-        //this.productService.getAllProductsPromise()
-        //    .then((data) => this.products = data);
+        this.productService.getAllProductsPromise()
+            .then(function (data) { return _this.productsList = data; });
     };
     AdminMainComponent.prototype.productAdded = function (product) {
         var _this = this;
-        this.productService.save(product).subscribe(function () {
+        this.productService.save(product)
+            .subscribe(function () {
             _this.productsList.push(Object.assign(product));
             console.log('product saved successfully');
         });

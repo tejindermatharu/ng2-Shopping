@@ -10,7 +10,7 @@ import { ProductDataService } from '../Repository/product.data.service';
 
 export class AdminMainComponent implements OnInit {
 
-    productsList: IProduct[];
+    public productsList: IProduct[];
 
     constructor(public productService: ProductDataService) {
 
@@ -23,13 +23,14 @@ export class AdminMainComponent implements OnInit {
             .subscribe((data: IProduct[]) =>  this.productsList = Object.assign(data));
 
         //using a promise
-        //this.productService.getAllProductsPromise()
-        //    .then((data) => this.products = data);
+        this.productService.getAllProductsPromise()
+            .then((data) => this.productsList = data);
     }
 
     public productAdded(product: IProduct): void {
-        this.productService.save(product).subscribe(
-            () => {
+
+        this.productService.save(product)
+            .subscribe(() => {
                 this.productsList.push(Object.assign(product));
                 console.log('product saved successfully');
             });

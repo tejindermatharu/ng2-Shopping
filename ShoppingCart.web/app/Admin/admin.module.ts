@@ -12,7 +12,6 @@ import { ProductDataService } from './Repository/product.data.service';
     declarations: [AdminMainComponent,
                    InputComponent,
                    AdminEditComponent],
-    providers: [ProductDataService],
-    exports: [AdminMainComponent, InputComponent]
+    providers: [ProductDataService]
 })
 export class AdminModule { }

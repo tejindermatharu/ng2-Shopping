@@ -31,7 +31,8 @@ __decorate([
 AdminEditComponent = __decorate([
     core_1.Component({
         selector: 'admin-edit',
-        templateUrl: 'app/Admin/Edit/admin.edit.html'
+        templateUrl: 'app/Admin/Edit/admin.edit.html',
+        styleUrls: ['app/Admin/Edit/admin.edit.css']
     }),
     __metadata("design:paramtypes", [])
 ], AdminEditComponent);

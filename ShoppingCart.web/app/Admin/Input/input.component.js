@@ -17,10 +17,9 @@ var InputComponent = (function () {
         this.createNewProduct();
     }
     InputComponent.prototype.add = function () {
-        var product = Object.assign(this.product);
+        this.added.emit(Object.assign(this.product));
         //Reset product object
         this.createNewProduct();
-        this.added.emit(product);
     };
     InputComponent.prototype.createNewProduct = function () {
         this.product = new product_1.Product();

@@ -272,6 +272,7 @@
     <Content Include="app\Admin\admin.module.js">
       <DependentUpon>admin.module.ts</DependentUpon>
     </Content>
+    <Content Include="app\Admin\Edit\admin.edit.css" />
     <Content Include="app\Admin\Input\input.component.js">
       <DependentUpon>input.component.ts</DependentUpon>
     </Content>
@@ -406,8 +407,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\Admin\admin.module.ts" />
+    <TypeScriptCompile Include="app\Admin\admin.constants.ts" />
     <TypeScriptCompile Include="app\Admin\Edit\admin.edit.component.ts" />
     <TypeScriptCompile Include="app\Admin\Main\admin.main.component.ts" />
+    <TypeScriptCompile Include="app\Admin\Main\admin.main.component.test.ts" />
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />

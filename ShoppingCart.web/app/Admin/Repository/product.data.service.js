@@ -16,10 +16,11 @@ require("rxjs/add/operator/map");
 require("rxjs/add/operator/do");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/toPromise");
+var admin_constants_1 = require("../admin.constants");
 var ProductDataService = (function () {
     function ProductDataService(http) {
         this.http = http;
-        this.baseUrl = '/api/product/';
+        this.baseUrl = admin_constants_1.AdminConstants.baseUrl;
     }
     ProductDataService.prototype.save = function (product) {
         var body = JSON.stringify(product);
@@ -43,8 +44,6 @@ var ProductDataService = (function () {
             .catch(this.handleErrorForPromise);
     };
     ProductDataService.prototype.handleError = function (error) {
-        // in a real world app, we may send the server to some remote logging infrastructure
-        // instead of just logging it to the console
         console.error('An error occurred', error);
         return Observable_1.Observable.throw(error.json().error || 'Server error');
     };

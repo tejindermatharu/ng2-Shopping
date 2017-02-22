@@ -30,22 +30,22 @@
 
         <td style="vertical-align: middle">
 
-            <span class="full-width-inline" [hidden]="!item.editMode">
+            <span class="full-width-inline" [hidden]="item.editMode">
                 {{item.desc}}
             </span>
 
-            <form name="editForm" [hidden]="item.editMode">
-                <input name="description" [(ngModel)]="item.desc"  required ng-keydown="vm.updateOnEnter(item, $event)" class="form-control" />
+            <form name="editForm" [hidden]="!item.editMode">
+                <input name="description" [(ngModel)]="item.desc"  required class="form-control" />
             </form>
         </td>
         <td style="vertical-align: middle">
 
-            <span class="full-width-inline" [hidden]="!item.editMode">
+            <span class="full-width-inline" [hidden]="item.editMode">
                 {{item.price}}
             </span>
 
-            <form name="editForm" [hidden]="item.editMode">
-                <input ng-model="item.price"  required ng-keydown="vm.updateOnEnter(item, $event)" class="form-control" />
+            <form name="editForm" [hidden]="!item.editMode">
+                <input name="price" [(ngModel)]="item.price"  required  class="form-control" />
             </form>
         </td>
     </tr>

@@ -19,12 +19,10 @@ export class InputComponent {
 
     public add(): void {
 
-        var product = Object.assign(this.product);
+        this.added.emit(Object.assign(this.product));
 
         //Reset product object
         this.createNewProduct();
-
-        this.added.emit(product);
     }
 
     private createNewProduct(): void {

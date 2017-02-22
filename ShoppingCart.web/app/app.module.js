@@ -11,8 +11,8 @@ var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var app_routing_module_1 = require("./app.routing.module");
 var nav_component_1 = require("./Nav/nav.component");
-var admin_module_1 = require("./Admin/admin.module");
 var shop_main_component_1 = require("./Shop/Main/shop.main.component");
+var admin_module_1 = require("./Admin/admin.module");
 var AppModule = (function () {
     function AppModule() {
     }

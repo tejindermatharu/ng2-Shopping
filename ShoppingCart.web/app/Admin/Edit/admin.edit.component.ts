@@ -3,7 +3,8 @@ import { IProduct }  from '../../Models/product';
 
 @Component({
     selector: 'admin-edit',
-    templateUrl: 'app/Admin/Edit/admin.edit.html'
+    templateUrl: 'app/Admin/Edit/admin.edit.html',
+    styleUrls: ['app/Admin/Edit/admin.edit.css']
 })
 
 export class AdminEditComponent implements OnChanges, OnInit  {
